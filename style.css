@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(45deg, #2c3e50, #4a6491);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#container {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#calculator {
+    width: 100%;
+    border-radius: 15px;
+    background: #1a1a2e;
+}
+
+#result {
+    height: 150px;
+    background: #16213e;
+    padding: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#history {
+    height: 30px;
+}
+
+#history-value {
+    color: #919191;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#output {
+    height: 70px;
+}
+
+#output-value {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #0f3460;
+    padding: 1px;
+}
+
+button {
+    height: 80px;
+    border: none;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+    color: white;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.number {
+    background: #1a1a2e;
+}
+
+.number:hover {
+    background: #22223a;
+}
+
+.operator {
+    background: #0f3460;
+}
+
+.operator:hover {
+    background: #1a4580;
+}
+
+#clear, #backspace {
+    background: #e94560;
+}
+
+#clear:hover, #backspace:hover {
+    background: #ff5773;
+}
+
+#equals {
+    background: #00b894;
+    grid-column: span 2;
+}
+
+#equals:hover {
+    background: #00d9a6;
+}
+
+.empty {
+    background: transparent;
+    cursor: default;
+}
+
+.empty:active {
+    transform: none;
+}
+
+#equal {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    #container {
+        max-width: 95%;
+    }
+    
+    button {
+        height: 70px;
+        font-size: 20px;
+    }
+    
+    #output-value {
+        font-size: 36px;
+    }
+}
