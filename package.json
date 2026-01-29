@@ -1,0 +1,12 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "A beautiful calculator web app",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open index.html in browser'"
+  },
+  "keywords": ["calculator", "web-app", "javascript"],
+  "author": "Your Name",
+  "license": "MIT"
+}
